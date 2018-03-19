@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements FragmentOne.Messa
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         FragmentOne fragmentOne = FragmentOne.getInstance("Hello Fragment One");
-        // Pass value with bundle
+        //Pass value with bundle
         //bundle = new Bundle();
         //bundle.putString("Yes", "Yes");
         //fragmentOne.setArguments(bundle);
