@@ -18,17 +18,19 @@ public class MainActivity extends AppCompatActivity implements FragmentOne.Messa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         Log.e(TAG, "Activity: onCreate called");
+        // Fragment initialise
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         FragmentOne fragmentOne = FragmentOne.getInstance("Hello Fragment One");
+
         //Pass value with bundle
         //bundle = new Bundle();
         //bundle.putString("Yes", "Yes");
         //fragmentOne.setArguments(bundle);
 
         ft.add(R.id.fragmentContainer,fragmentOne);
+        // back button : stack request
         ft.addToBackStack(null);
         ft.commit();
     }

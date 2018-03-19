@@ -22,7 +22,6 @@ public class FragmentOne extends Fragment {
     private Button btn;
     private MessageListener listener;
 
-
     private static final String TAG = FragmentOne.class.getSimpleName();
     public FragmentOne() {
         // Required empty public constructor
@@ -37,12 +36,13 @@ public class FragmentOne extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         Log.e(TAG, "Fragment: onCreateView called");
+
         String msg = getArguments().getString("msg");
-        //Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
+
         View v = inflater.inflate(R.layout.fragment_fragment_one, container, false);
         btn = v.findViewById(R.id.sendBtn);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -104,8 +104,9 @@ public class FragmentOne extends Fragment {
         Log.e(TAG, "Fragment: onDestroy called");
     }
 
-
+    // Create Interface Class
     public interface MessageListener{
         void getMessage(String msg);
     }
+
 }

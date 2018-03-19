@@ -26,14 +26,14 @@ public class FragmentTwo extends Fragment {
         fragmentTwo.setArguments(bundle);
         return fragmentTwo;
     }
+
     public static FragmentTwo getInstance(){
         FragmentTwo fragmentTwo = new FragmentTwo();
         return fragmentTwo;
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_fragment_two, container, false);
         msgTV = v.findViewById(R.id.showMsg);
@@ -45,5 +45,4 @@ public class FragmentTwo extends Fragment {
         }
         return v;
     }
-
 }
