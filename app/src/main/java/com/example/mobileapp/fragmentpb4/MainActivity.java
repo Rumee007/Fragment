@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements FragmentOne.Messa
         ft.commit();
     }
 
+    // OnClick Button
     public void changeFragment(View view) {
         Fragment fragment = null;
         switch (view.getId()){
@@ -42,7 +43,8 @@ public class MainActivity extends AppCompatActivity implements FragmentOne.Messa
                 fragment = FragmentOne.getInstance("Hello Fragment One");
                 break;
             case R.id.f2:
-                fragment = new FragmentTwo();
+                fragment = FragmentTwo.getInstance("Hello Fragment Two");
+//                fragment = new FragmentTwo();
                 break;
         }
         FragmentManager fm = getSupportFragmentManager();
